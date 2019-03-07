@@ -1,276 +1,225 @@
-/*! HTML5 Boilerplate v7.0.1 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 1.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
-
-/* ==========================================================================
-   Base styles: opinionated defaults
-   ========================================================================== */
-
-   html {
-    color: hsla(200, 15%, 81%, 1);
-    font-size: 1em;
-    line-height: 1.4;
+.container {
+  opacity: 0.95;
 }
 
-/*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
-
-::selection {
-    background: hsla(200, 39%, 50%, 1);
-    text-shadow: none;
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+  padding: 1em;
+  /*background: url('/images/pizza2_lrg.jpg') no-repeat center center fixed;*/
 }
 
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+#menu_background {
+  margin: 0% auto;
+  width: 650px;
+  border-radius: 25px;
+  /* border: 3px solid #080054; */
+  padding: 1px 0px;
+  /* background-color: #f29a80; */
+  /* background-color: #2b65c4; */
+  /*box-shadow: 0 0 0 3px hsla(0, 100%, 100%, 0.8); */
+  opacity: 1;
 }
 
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
+#menu_background>h1 {
+  font-size: 60px;
+  color: hsla(130, 74%, 25%, 1);
+  /*text-shadow: 1.5px 1.5px 5px #fff, 1px 1px 5px #000;*/
+  margin: -2% 0 0 auto;
+  text-align: center;
 }
 
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+#menu {
+  margin: 0 auto;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  border-radius: 25px;
 }
 
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-    resize: vertical;
+.menu {
+  flex: 1 150px;
+  min-width: 0;
+  border: 2px solid #080054;
+  /*box-shadow: 0 0 0 3px hsla(0, 100%, 100%, 0.7);*/
+  /*padding: 10px;*/
+  margin: 0.15em;
 }
 
-/* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
+.menu:nth-child(even) {
+  background-color: hsla(220, 16%, 96%, 0.9);
+  border-radius: 5px;
 }
 
-
- /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-
-
-
- /* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
- .hidden {
-  display: none !important;
+.menu:nth-child(odd) {
+  background-color: hsla(220, 8%, 92%, 0.9);
+  border-radius: 5px;
 }
 
-/*
-* Hide only visually, but have it available for screen readers:
-* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-*
-* 1. For long content, line feeds are not interpreted as spaces and small width
-*    causes content to wrap 1 word per line:
-*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-*/
-
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap; /* 1 */
+h3, td {
+  color: hsla(0, 0%, 0%, 1);
+}
+h3.title {
+  color: #fff;
+  margin: 0 auto;
+  background-color: hsla(140, 74%, 45%, 0.8);
+  font-size: 1.15rem;
+  font-weight: normal;
 }
 
-/*
-* Extends the .visuallyhidden class to allow the element
-* to be focusable when navigated to via the keyboard:
-* https://www.drupal.org/node/897638
-*/
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto;
-  white-space: inherit;
+#menu h3.title {
+  padding: 0.25em 1em;
 }
 
-/*
-* Hide visually and from screen readers, but maintain layout
-*/
+#cart th {
+  text-align: left;
+}
+#cart th h3.title {
+  background-color: initial;
+}
+.menu>fieldset {
+  padding: 0.3em 0.6em 0.6em 1.9em;
+  font-family: sans-serif;
+  color: #444;
+  font-size: 1rem;
+}
+.menu>fieldset input[type=checkbox],
+.menu>fieldset input[type=radio] {
+  margin-left: -1.38em;
+  margin-right: 0.25em;
+  margin-bottom: 0.25em;
+}
+.button {
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  border-radius: .5em;
+  border: 1px solid #ddd;
+  margin: 1% auto;
+  padding: .1px 0 .1px 0px;
+  font: 18px sans-serif;
 
-.invisible {
-  visibility: hidden;
+  color: #000;
+  background-color: hsla(0, 100%, 100%, 0.6);
 }
 
-/*
-* Clearfix: contain floats
-*
-* For modern browsers
-* 1. The space content is one way to avoid an Opera bug when the
-*    `contenteditable` attribute is included anywhere else in the document.
-*    Otherwise it causes space to appear at the top and bottom of elements
-*    that receive the `clearfix` class.
-* 2. The use of `table` rather than `block` is only necessary if using
-*    `:before` to contain the top-margins of child elements.
-*/
-
-.clearfix:before,
-.clearfix:after {
-  content: " "; /* 1 */
-  display: table; /* 2 */
+.button:hover {
+  color: #fff;
+  background-color: hsla(140, 74%, 45%, 0.95); /*#6486bc;*/
 }
 
-.clearfix:after {
-  clear: both;
+.button>p {
+  text-align: center;
+  /*font-weight: bold;*/
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-   @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+.controls {
+  display: flex;
+  flex-direction: columns;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 600px;
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+.controls>.button {
+  flex: 1 150px;
+  margin: 0.5em;
+  padding: 0.6em 1em;
 }
 
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-   @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster */
-        -webkit-box-shadow: none !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre {
-        white-space: pre-wrap !important;
-    }
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
-     * Printing Tables:
-     * http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
+table {
+  width: 100%;
+  border: none;
+  border-spacing: 0;
 }
 
+#cart {
+  /*opacity: 0;*/
+  margin: 15px auto;
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  background-color: hsla(220, 16%, 96%, 0.9);
+  border: 2px solid #080054;
+  /*box-shadow: 0 0 0 3px hsla(0, 100%, 100%, 0.8);*/
+  border-radius: 5px;
+}
 
+#title1 {
+  color: #fff;
+  background-color: hsla(140, 74%, 45%, 0.8);
+}
+
+#title2 {
+  color: #fff;
+  background-color: hsla(140, 74%, 45%, 0.8);
+}
+
+#cart td,
+#cart th {
+  font-size: 1em;
+  width: 250px;
+  padding: 1em 1.25em;
+}
+
+#totalPrice {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+/*pizza tutorial css*/
+
+.body_basic {
+  top: 0%;
+  margin: 0 auto;
+  width: 100%;
+  background-color: hsla(24, 16%, 94%, 1);
+}
+
+#menu_background_basic {
+  top: 0%;
+  margin: 0 auto;
+  width: 90%;
+  background-color: hsla(24, 16%, 94%, 1);
+}
+
+#menu_background_basic>h1 {
+  color: darkblue;
+  font: 60px Merriweather;
+  width: 60%;
+  margin: 0 auto;
+}
+
+#explanation {
+  width: 60%;
+  padding: 2%;
+  margin: 0 auto;
+  background-color: hsla(18, 100%, 97%, 1);
+  border: 1px solid hsla(18, 63%, 53%, 1);
+}
+
+#explanation>p {
+  line-height: 1.5em;
+  margin: 2% 0 0 0;
+}
+
+#menu_basic,
+#cart_basic {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.menu_basic,
+#showText {
+  width: 40%;
+  margin: 20px auto;
+}
