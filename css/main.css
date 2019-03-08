@@ -6,6 +6,7 @@ body {
   font-family: sans-serif;
   background-color: #fff;
   padding: 1em;
+  background: url('/images/pizza2_lrg.jpg') no-repeat center center fixed;
 }
 
 #menu_background {
