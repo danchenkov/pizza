@@ -71,7 +71,3 @@ It is expected that you will need to do some additional research in order to com
 If you find yourself a little overwhelmed, try to break it all down into smaller pieces. Then, resolve each piece one at a time. Research online, review previous videos, check the developer forums, collaborate with other students when/where appropriate. If you are still stumped after all of these steps, talk with an instructor for some additional hints.
 
 You can do this. Be creative and really get into the spirit of this assignment. And most of all, Have fun! When you have completed the drill submit your GitHub link on the next page.
-
-## STILL FEELING A LITTLE LOST?
-Although it is good practice to try and resolve code problems yourself, you may want to check out the following tutorial to get you pointed in the right direction:
-
