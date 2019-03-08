@@ -1,5 +1,6 @@
 function getReceipt() {
 	var order = [];
+	clearAll();
 	var sizeArray = document.getElementsByClassName("size");
 	for (var i = 0; i < sizeArray.length; i++) {
 		if (sizeArray[i].checked) {
@@ -15,7 +16,7 @@ function getReceipt() {
 	} else if (selectedSize === "Extra Large Pizza") {
 		price = 16;
 	}
-	// runningTotal = price;
+
 	var pizza = new Object();
 	pizza.item = selectedSize;
 	pizza.price = price;
@@ -27,11 +28,11 @@ function getReceipt() {
 	order.push(getSauce());
 
 	log(order);
+	print(order);
 };
 
 function getMeat() {
 	var meats = [];
-	// var meatTotal = 0;
 	var meatArray = document.getElementsByClassName("meats");
 	for (var j = 0; j < meatArray.length; j++) {
 		if (meatArray[j].checked) {
@@ -39,28 +40,12 @@ function getMeat() {
 			m.item = meatArray[j].value;
 			m.price = 1
 			meats.push(m)
-			// selectedMeat.push(meatArray[j].value);
-			// console.log("selected meat item: ("+meatArray[j].value+")");
-			// text1 = text1+meatArray[j].value+"<br>";
 		}
 	}
 	if (meats.length > 0) {
 		meats[0].price = 0;
 	}
 	return meats
-	// var meatCount = selectedMeat.length;
-	// if (meatCount > 1) {
-	// 	meatTotal = (meatCount - 1);
-	// } else {
-	// 	meatTotal = 0;
-	// }
-	// runningTotal = (runningTotal + meatTotal);
-	// console.log("total selected meat items: "+meatCount);
-	// console.log(meatCount+" meat - 1 free meat = "+"$"+meatTotal+".00");
-	// console.log("meat text1: "+text1);
-	// console.log("Purchase Total: "+"$"+runningTotal+".00");
-	// document.getElementById("showText1").innerHTML=text1;
-	// document.getElementById("totalPrice").innerHTML = "<strong>$"+runningTotal+".00"+"</strong>";
 }
 
 function getVeggies() {
@@ -147,9 +132,20 @@ function log(order) {
 function print(order) {
 	var total = 0;
 	for (var i = 0; i < order.length; i++) {
+		$("#total").before("<tr><td>" + order[i].item + "</td><td>$" + order[i].price + "</td></tr>\n");
 		total += order[i].price;
 	}
-	// finish the writer
+	$("#totalAmount").text("$" + total);
+	$("#cart").show();
+}
+
+function clearAll() {
+	$("#cart").hide();
+	board = $("#cart table tr");
+	if (board.length > 2) {
+		$("#cart table").html(board[0].outerHTML + board[board.length-1].outerHTML);
+	}
+	$("#totalAmount").text("");
 }
 
 $(function() {

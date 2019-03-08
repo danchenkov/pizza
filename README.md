@@ -1,6 +1,6 @@
-# Pizza ordering app
+# PIZZA ORDERING APP
 
-## SCENARIO: JAVASCRIPT COURSE - FINAL PROJECT:
+## SCENARIO:
 Your client would like you to create an online pizza menu system using only HTML, CSS, and JavaScript.
 
 For this drill, you will need to provide the following:
